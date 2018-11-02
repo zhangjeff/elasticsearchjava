@@ -115,9 +115,11 @@ public class UpdateRequestTest {
                         .endObject())
                 .get();
 
+        System.out.println("--------------------------");
         GetResponse response = client.prepareGet("aaa", "bbb", "4")
                 .setOperationThreaded(false)
                 .get();
+
 
         System.out.println(response.getSource());
     }
