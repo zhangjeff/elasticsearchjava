@@ -1,6 +1,5 @@
 package com.jeff;
 
-import org.elasticsearch.action.bulk.byscroll.BulkByScrollResponse;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexResponse;
@@ -89,17 +88,17 @@ public class ElasticsearchBatchDeleteTest {
 //                .get();
 
 
-        BulkByScrollResponse response =
-                DeleteByQueryAction.INSTANCE.newRequestBuilder(client)
-                        .filter(QueryBuilders.matchQuery("userName", "张三")) //查询条件
-                        .source("msg") //index(索引名)
-                        .get();  //执行
-        System.out.println(response);
+//        BulkByScrollResponse response =
+//                DeleteByQueryAction.INSTANCE.newRequestBuilder(client)
+//                        .filter(QueryBuilders.matchQuery("userName", "张三")) //查询条件
+//                        .source("msg") //index(索引名)
+//                        .get();  //执行
+//        System.out.println(response);
+//
+//
+//        long deleted = response.getDeleted();
 
-
-        long deleted = response.getDeleted();
-
-        System.out.println("deleted=" + deleted);
+//        System.out.println("deleted=" + deleted);
 
 //        DeleteResponse delresponse = client.prepareDelete("msg", "tweet", "1")
 //                .get();
